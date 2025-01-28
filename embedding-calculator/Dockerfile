@@ -1,3 +1,6 @@
+ARG MODEL_IMAGE
+FROM ${MODEL_IMAGE:-exadel/compreface-core:latest} AS model-image
+
 ARG BASE_IMAGE
 FROM ${BASE_IMAGE:-python:3.8-slim-bullseye}
 
@@ -66,7 +69,7 @@ ENV FACE_DETECTION_PLUGIN=$FACE_DETECTION_PLUGIN CALCULATION_PLUGIN=$CALCULATION
     EXTRA_PLUGINS=$EXTRA_PLUGINS
 COPY src src
 COPY srcext srcext
-COPY --from=exadel/compreface-core:latest /app/ml/.models /app/ml/.models
+COPY --from=model-image /app/ml/.models /app/ml/.models
 RUN python -m src.services.facescan.plugins.setup
 
 # copy rest of the code
