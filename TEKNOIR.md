@@ -49,7 +49,13 @@ make build-custom-facenet-gpu
 docker push us-docker.pkg.dev/teknoir/gcr.io/compreface-core:latest-custom-facenet-gpu
 ```
 
-## Deploy
+## Run
+To run above custom builds(`docker compose build` will not work here) navigate to `teknoir` dir and run:
+```bash
+docker compose up
+```
+
+## Deploy to K8s
 Our own Helm Chart for CompreFace can be found here:
 https://github.com/teknoir/compreface-helm
 
