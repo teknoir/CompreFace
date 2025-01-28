@@ -3,14 +3,7 @@
 The repo contain some minimal config changes to be able to build and run CompreFace in the Teknoir platform.
 Changes has been made for custom builds and build scripts to 
 
-## Add models
-
-Open the file `embedding-calculator/Dockerfile` go to line 71, and add your models to the `/app/ml/.models` dir something like this.
-```Dockerfile
-COPY <path to my model> /app/ml/.models/
-```
-
-## Custom build
+## Custom builds
 
 Navigate to `dev` dir and run:
 ```bash
@@ -36,6 +29,8 @@ The custom build now creates the following images:
 * us-docker.pkg.dev/teknoir/gcr.io/compreface-core:latest-arcface-r100
 * us-docker.pkg.dev/teknoir/gcr.io/compreface-core:latest-mobilenet-gpu
 * us-docker.pkg.dev/teknoir/gcr.io/compreface-core:latest-arcface-r100-gpu
+
+# Add your own model
 
 ## Example custom gpu accelerated facenet model
 There were no build scripts for gpu accelerated facenet images in CompreFace, so we added some.
