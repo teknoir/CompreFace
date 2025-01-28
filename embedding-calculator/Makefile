@@ -26,8 +26,8 @@ FACENET_BUILD_ARGS := --build-arg FACE_DETECTION_PLUGIN=facenet.FaceDetector \
                           --build-arg MODEL_IMAGE=exadel/compreface-core:1.2.0-facenet \
                           --build-arg SKIP_TESTS=true
 
-CUSTOM_FACENET_BUILD_ARGS := --build-arg FACE_DETECTION_PLUGIN=facenet.FaceDetector \
-                              --build-arg CALCULATION_PLUGIN=facenet.Calculator \
+CUSTOM_FACENET_BUILD_ARGS := --build-arg FACE_DETECTION_PLUGIN=facenet.FaceDetector@facenet512 \
+                              --build-arg CALCULATION_PLUGIN=facenet.Calculator@facenet512 \
                               --build-arg EXTRA_PLUGINS=facenet.LandmarksDetector,agegender.GenderDetector,agegender.AgeDetector,facenet.facemask.MaskDetector,facenet.PoseEstimator \
                               --build-arg MODEL_IMAGE=$(CUSTOM_MODEL_IMAGE):$(VERSION)-custom-facenet-gpu \
                               --build-arg SKIP_TESTS=true

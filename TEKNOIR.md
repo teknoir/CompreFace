@@ -35,8 +35,10 @@ The custom build now creates the following images:
 ## Example custom gpu accelerated facenet model
 There were no build scripts for gpu accelerated facenet images in CompreFace, so we added some.
 
-See [Dockerfile](teknoir/Dockerfile) how a facenet model replace the existing model just to be a carrier to be copied 
-into the actual image at build time.
+See [facenet.py](embedding-calculator/src/services/facescan/plugins/facenet/facenet.py) how the facenet model is added
+to the code.
+
+See [Dockerfile](teknoir/Dockerfile) how a facenet model is added to a carrier image to be copied into the actual image at build time.
 
 See [Makefile](embedding-calculator/Makefile) have been updated with a custom facenet model build.
 
