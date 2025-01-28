@@ -43,7 +43,7 @@ There were no build scripts for gpu accelerated facenet images in CompreFace, so
 See [Dockerfile](teknoir/Dockerfile) how a facenet model replace the existing model just to be a carrier to be copied 
 into the actual image at build time.
 
-See [Makefile](embedding-calculator/Makefile) have been updated with 
+See [Makefile](embedding-calculator/Makefile) have been updated with a custom facenet model build.
 
 Nvigate to the `embedding-calculator` dir and manually build the new images: 
 ```bash
