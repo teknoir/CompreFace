@@ -1,7 +1,7 @@
 ARG MODEL_IMAGE
-FROM ${MODEL_IMAGE:-exadel/compreface-core:latest} AS model-image
-
 ARG BASE_IMAGE
+
+FROM ${MODEL_IMAGE:-exadel/compreface-core:latest} AS model-image
 FROM ${BASE_IMAGE:-python:3.8-slim-bullseye}
 
 RUN apt-get update && apt-get install -y build-essential cmake git wget unzip \

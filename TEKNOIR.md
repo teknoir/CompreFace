@@ -42,7 +42,7 @@ See [Dockerfile](teknoir/Dockerfile) how a facenet model is added to a carrier i
 
 See [Makefile](embedding-calculator/Makefile) have been updated with a custom facenet model build.
 
-Nvigate to the `embedding-calculator` dir and manually build the new images: 
+Navigate to the `embedding-calculator` dir and manually build the new images: 
 ```bash
 make build-cuda
 make build-custom-facenet-gpu
